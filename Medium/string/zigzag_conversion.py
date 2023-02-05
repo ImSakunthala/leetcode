@@ -51,7 +51,7 @@ class Solution:
         # move -> movement of character in zigzag direction
         index, move = 0, 1
 
-        # Using for loop separating each and every character in string
+        # Use for loop separating each and every character in string
         for char in s:
 
             # when index and move is positive then it is in forward direction
