@@ -47,7 +47,6 @@ class Solution:
         return matches
 
 
-
 solution = Solution()
 assert 6 == solution.numberOfMatches(n=7)
 assert 13 == solution.numberOfMatches(n=14)
