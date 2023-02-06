@@ -48,6 +48,6 @@ class Solution:
 
 
 solution = Solution()
-print('[7, 0, 8] ->', solution.addTwoNumbers(l1=[2, 4, 3], l2= [5, 6, 4]))
-print('[0] ->', solution.addTwoNumbers(l1=[0], l2=[0]))
-print('[8,9,9,9,0,0,0,1] ->', solution.addTwoNumbers(l1=[9, 9, 9, 9, 9, 9, 9], l2=[9, 9, 9, 9]))
+assert [7, 0, 8] == solution.addTwoNumbers(l1=[2, 4, 3], l2=[5, 6, 4])
+assert [0] == solution.addTwoNumbers(l1=[0], l2=[0])
+assert [8, 9, 9, 9, 0, 0, 0, 1] == solution.addTwoNumbers(l1=[9, 9, 9, 9, 9, 9, 9], l2=[9, 9, 9, 9])
