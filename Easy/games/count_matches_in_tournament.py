@@ -49,5 +49,5 @@ class Solution:
 
 
 solution = Solution()
-print('6 ->', solution.numberOfMatches(n=7))
-print('13 ->', solution.numberOfMatches(n=14))
+assert 6 == solution.numberOfMatches(n=7)
+assert 13 == solution.numberOfMatches(n=14)
