@@ -25,6 +25,7 @@ Handle the TypeError exception to handle the case where the input is not a strin
 Write a program that takes a list of numbers and returns the second largest number in the list.
 Handle the ValueError exception to handle the case where the list has fewer than 2 elements.
 
+10
 Write a program that reads a list of numbers from the user,and converts them to a list of integers.
 The program should handle the ValueError exception if the user enters a non-integer value, and ask the user to enter a valid number.
 The program should continue until the user enters a list of 10 numbers. After the user enters the 10 numbers,
