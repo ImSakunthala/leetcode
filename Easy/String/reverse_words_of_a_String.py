@@ -32,7 +32,6 @@ class Solution:
         return " ".join(reverse_list)
 
 
-
-solution =  Solution()
-print("s'teL ekat edoCteeL tsetnoc->", solution.reverseWords(s = "Let's take LeetCode contest"))
-print("doG gniD ->", solution.reverseWords(s = "God Ding"))
+solution = Solution()
+assert "s'teL ekat edoCteeL tsetnoc" == solution.reverseWords(s="Let's take LeetCode contest")
+assert "doG gniD" == solution.reverseWords(s="God Ding")
