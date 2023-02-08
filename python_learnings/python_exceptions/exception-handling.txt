@@ -1,13 +1,13 @@
-Write a program that takes two numbers as input from the user and divides the first number by the second.
- Handle the ZeroDivisionError exception to handle the case where the second number is 0.
+1) Write a program that takes two numbers as input from the user and divides the first number by the second.
+Handle the ZeroDivisionError exception to handle the case where the second number is 0.
 
-Write a program that reads a list of integers from the user, and prints the average of the numbers.
+2) Write a program that reads a list of integers from the user, and prints the average of the numbers.
 Handle the ValueError exception to handle the case where the user enters non-integer values.
 
-Write a program that opens a file and reads the contents of the file.
+3) Write a program that opens a file and reads the contents of the file.
 Handle the FileNotFoundError exception to handle the case where the file doesn't exist.
 
-Write a program that takes a list of numbers and prints the largest and smallest numbers in the list.
+4) Write a program that takes a list of numbers and prints the largest and smallest numbers in the list.
 Handle the ValueError exception to handle the case where the list is empty.
 
 Write a program that takes a dictionary of names and ages, and prints the name of the oldest person.
@@ -25,7 +25,6 @@ Handle the TypeError exception to handle the case where the input is not a strin
 Write a program that takes a list of numbers and returns the second largest number in the list.
 Handle the ValueError exception to handle the case where the list has fewer than 2 elements.
 
-10
 Write a program that reads a list of numbers from the user,and converts them to a list of integers.
 The program should handle the ValueError exception if the user enters a non-integer value, and ask the user to enter a valid number.
 The program should continue until the user enters a list of 10 numbers. After the user enters the 10 numbers,
