@@ -4,17 +4,16 @@ Handle the ZeroDivisionError exception to handle the case where the second numbe
 2) Write a program that reads a list of integers from the user, and prints the average of the numbers.
 Handle the ValueError exception to handle the case where the user enters non-integer values.
 
-3) Write a program that opens a file and reads the contents of the file.
+Write a program that opens a file and reads the contents of the file.
 Handle the FileNotFoundError exception to handle the case where the file doesn't exist.
 
 4) Write a program that takes a list of numbers and prints the largest and smallest numbers in the list.
 Handle the ValueError exception to handle the case where the list is empty.
 
-Write a program that takes names and ages from user as input, and print the age of name given by user.
+5) Write a program that takes names and ages from user as input, and print the age of name given by user.
 Handle the KeyError exception to handle the case where a name is not found in the dictionary.
 
-
-Write a program that takes a list of strings and converts them to integers.
+6) Write a program that takes a list of strings and converts them to integers.
  Handle the ValueError exception to handle the case where a string cannot be converted to an integer.
 
 Write a program that takes two lists and returns the common elements between the lists.

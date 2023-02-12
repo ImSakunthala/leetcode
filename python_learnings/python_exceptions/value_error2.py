@@ -11,7 +11,7 @@ class Solution:
             for num in string_list:
                 result.append(int(num))
         except ValueError:
-            print('List contains inconvertible types')
+            print('List contains inconvertible types!')
 
         return result
 
