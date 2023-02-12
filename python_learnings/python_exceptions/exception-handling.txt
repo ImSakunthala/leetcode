@@ -10,8 +10,9 @@ Handle the FileNotFoundError exception to handle the case where the file doesn't
 4) Write a program that takes a list of numbers and prints the largest and smallest numbers in the list.
 Handle the ValueError exception to handle the case where the list is empty.
 
-Write a program that takes a dictionary of names and ages, and prints the name of the oldest person.
- Handle the KeyError exception to handle the case where a name is not found in the dictionary.
+Write a program that takes names and ages from user as input, and print the age of name given by user.
+Handle the KeyError exception to handle the case where a name is not found in the dictionary.
+
 
 Write a program that takes a list of strings and converts them to integers.
  Handle the ValueError exception to handle the case where a string cannot be converted to an integer.
