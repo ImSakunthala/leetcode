@@ -4,17 +4,28 @@ Handle the KeyError exception to handle the case where a name is not found in th
 """
 
 
+class AgeError(Exception):
+    """This is invalid age"""
 class Solution:
+
     def key_error(self, name_list: dict):
         print('Data Initialization')
 
         while True:
             name = input('Enter Name[Hit Enter to complete Database initialisation]:')
             if len(name) != 0:
-                age = int(input(f'Enter age of {name}'))
-                name_list[name] = age
+                try:
+                    age = int(input(f'Enter age of {name}:'))
+                    if age <= 0:
+                        raise AgeError('This is invalid age')
+                    name_list[name] = age
+                except AgeError as e:
+                    print(e)
+                except ValueError:
+                    print('Enter valid age')
             else:
                 break
+
         print(f'number of records {len(name_list)}')
         print('Data verification')
 
