@@ -66,6 +66,6 @@ class Solution:
 
 
 solution = Solution()
-print(solution.intToRoman(num=3))
-print(solution.intToRoman(num=44))
-print(solution.intToRoman(num=1994))
+assert 'III' == solution.intToRoman(num=3)
+assert 'XLIV' == solution.intToRoman(num=44)
+assert 'MCMXCV' == solution.intToRoman(num=1995)
