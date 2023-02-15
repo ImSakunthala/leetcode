@@ -19,7 +19,7 @@ Handle the KeyError exception to handle the case where a name is not found in th
 7) Write a program that takes two lists and returns the common elements between the lists.
 Handle the IndexError exception to handle the case where one of the lists is shorter than the other.
 
-Write a program that takes a string and prints the number of vowels in the string.
+8) Write a program that takes a string and prints the number of vowels in the string.
 Handle the TypeError exception to handle the case where the input is not a string.
 
 Write a program that takes a list of numbers and returns the second largest number in the list.

@@ -11,7 +11,6 @@ class Solution:
             for element in List_2:
                 if element in List_1:
                     common.append(element)
-
         else:
             try:
                 raise IndexError
@@ -20,7 +19,7 @@ class Solution:
                     print('List_1 is shorter than List_2')
                 else:
                     print('List_2 is shorter than List_1')
-        return common
+        return common if len(common) != 0 else None
 
 
 solution = Solution()
