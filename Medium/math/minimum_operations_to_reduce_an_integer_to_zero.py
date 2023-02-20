@@ -62,10 +62,10 @@ class Solution:
 
 
 solution = Solution()
-print(solution.minOperations(n=97123))
-print(solution.minOperations(n=39))
-print(solution.minOperations(n=54))
-print(solution.minOperations(n=81))
-print(solution.minOperations(n=27))
-print(solution.minOperations(n=124))
-print(solution.minOperations(n=56))
+assert 7 == solution.minOperations(n=97123)
+assert 3 == solution.minOperations(n=39)
+assert 3 == solution.minOperations(n=54)
+assert 3 == solution.minOperations(n=81)
+assert 3 == solution.minOperations(n=27)
+assert 2 == solution.minOperations(n=124)
+assert 2 == solution.minOperations(n=56)
