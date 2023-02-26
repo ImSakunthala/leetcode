@@ -47,32 +47,19 @@ class Solution:
                            'l': '.-..', 'm': '--', 'n': '-.', 'o': '---', 'p': '.--.', 'q': '--.-',
                            'r': '.-.', 's': '...', 't': '-', 'u': '..-', 'v': '...-', 'w': '.--',
                            'x': '-..-', 'y': '-.--', 'z': '--..'}
-        result = 0
 
-        if len(words) == 1:
-            return 1
-
-        else:
-
-            morse_code_words_list = []
-            for word in words:
-                morse_word = ''
-                for character in word:
-                    morse_word += morse_code_dict[character]
+        morse_code_words_list = []
+        for word in words:
+            morse_word = ''
+            for character in word:
+                morse_word += morse_code_dict[character]
+            if morse_word not in morse_code_words_list:
                 morse_code_words_list.append(morse_word)
-            print(morse_code_words_list)
 
-            for index, morse_code_word in enumerate(morse_code_words_list):
-                if (index + 1) < len(words):
-                    a = morse_code_words_list[index]
-                    b = morse_code_words_list[index + 1]
-                    if a == b:
-                        result += 1
-
-        return result
+        return len(morse_code_words_list)
 
 
 solution = Solution()
-# print('2 ->', solution.uniqueMorseRepresentations(words=["gin", "zen", "gig", "msg"]))
-# print('1 ->', solution.uniqueMorseRepresentations(words=["a"]))
-print('1 ->', solution.uniqueMorseRepresentations(words=["noilq", "kzlq", "ydreq", "ybxk", "kzlq"]))
+assert 2 == solution.uniqueMorseRepresentations(words=["gin", "zen", "gig", "msg"])
+assert 1 == solution.uniqueMorseRepresentations(words=["a"])
+assert 1 == solution.uniqueMorseRepresentations(words=["noilq", "kzlq", "ydreq", "ybxk", "kzlq"])

@@ -1,0 +1,35 @@
+1) Write a program that takes two numbers as input from the user and divides the first number by the second.
+Handle the ZeroDivisionError exception to handle the case where the second number is 0.
+
+2) Write a program that reads a list of integers from the user, and prints the average of the numbers.
+Handle the ValueError exception to handle the case where the user enters non-integer values.
+
+Write a program that opens a file and reads the contents of the file.
+Handle the FileNotFoundError exception to handle the case where the file doesn't exist.
+
+4) Write a program that takes a list of numbers and prints the largest and smallest numbers in the list.
+Handle the ValueError exception to handle the case where the list is empty.
+
+5) Write a program that takes names and ages from user as input, and print the age of name given by user.
+Handle the KeyError exception to handle the case where a name is not found in the dictionary.
+
+6) Write a program that takes a list of strings and converts them to integers.
+ Handle the ValueError exception to handle the case where a string cannot be converted to an integer.
+
+7) Write a program that takes two lists and returns the common elements between the lists.
+Handle the IndexError exception to handle the case where one of the lists is shorter than the other.
+
+8) Write a program that takes a string and prints the number of vowels in the string.
+Handle the TypeError exception to handle the case where the input is not a string.
+
+Write a program that takes a list of numbers and returns the second largest number in the list.
+Handle the ValueError exception to handle the case where the list has fewer than 2 elements.
+
+Write a program that reads a list of numbers from the user,and converts them to a list of integers.
+The program should handle the ValueError exception if the user enters a non-integer value, and ask the user to enter a valid number.
+The program should continue until the user enters a list of 10 numbers. After the user enters the 10 numbers,
+the program should print the average of the numbers.
+This exercise requires you to handle multiple exceptions in a loop, and to ask the user for input repeatedly until a specific condition is met.
+It also requires you to accumulate and calculate the average of a list of numbers,
+which will test your knowledge of lists and basic mathematical operations in Python.
+

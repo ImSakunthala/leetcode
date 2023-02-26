@@ -32,4 +32,5 @@ class Solution:
 
 
 solution = Solution()
-print(solution.longestCommonPrefix(["flower", "flow", "flight"]))
+# print(solution.longestCommonPrefix(["flower", "flow", "flight"]))
+print(solution.longestCommonPrefix(['cir', 'car']))
