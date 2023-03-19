@@ -95,5 +95,6 @@ class RockPaperScissorsGame:
             attempt += 1
         self.final_result()
 
-game = RockPaperScissorsGame(3)
+
+game = RockPaperScissorsGame()
 game.start()
