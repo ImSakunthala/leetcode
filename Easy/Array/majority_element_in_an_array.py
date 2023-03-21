@@ -24,9 +24,10 @@ n == nums.length
 from typing import List
 from collections import Counter
 
+
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        max_element, num_count = len(nums)//2, Counter(nums)
+        max_element, num_count = len(nums) // 2, Counter(nums)
 
         for num in nums:
             if num_count[num] > max_element:
@@ -34,5 +35,5 @@ class Solution:
 
 
 solution = Solution()
-assert solution.majorityElement(nums = [3,2,3]) == 3
-assert solution.majorityElement(nums = [2,2,1,1,1,2,2]) == 2
+assert solution.majorityElement(nums=[3, 2, 3]) == 3
+assert solution.majorityElement(nums=[2, 2, 1, 1, 1, 2, 2]) == 2
