@@ -63,6 +63,6 @@ class Solution:
 
 
 solution = Solution()
-print(solution.categorizeBox(length=2909, width=3968, height=3272, mass=727))
-print(solution.categorizeBox(length=200, width=50, height=800, mass=50))
-print(solution.categorizeBox(length=1000, width=35, height=700, mass=300))
+assert solution.categorizeBox(length=2909, width=3968, height=3272, mass=727) == 'Both'
+assert solution.categorizeBox(length=200, width=50, height=800, mass=50) == 'Neither'
+assert solution.categorizeBox(length=1000, width=35, height=700, mass=300) == 'Heavy'
