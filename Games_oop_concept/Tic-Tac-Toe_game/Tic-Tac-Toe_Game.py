@@ -32,3 +32,63 @@ another input from person who entered wrong input]
 
 **************************** Very Simple Game for basic OOP concept ****************************************
 """
+import os
+
+
+class TicTacToe:
+
+    def __init__(self):
+        print('*******Welcome to Tic-Tac-Toe game!*******')
+        self.cells = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+
+    def display_board(self):
+        print(f'{self.cells[0]} | {self.cells[1]} | {self.cells[2]}')
+        print('--|---|---')
+        print(f'{self.cells[3]} | {self.cells[4]} | {self.cells[5]}')
+        print('--|---|---')
+        print(f'{self.cells[6]} | {self.cells[7]} | {self.cells[8]}')
+
+    def refresh_screen(self):
+        os.system('clear')
+        self.__init__()
+        self.display_board()
+
+    def update_cells(self, cell_no, player):
+        if self.cells[cell_no] == ' ':
+            self.cells[cell_no] = player
+            self.display_board()
+
+    def player_choice(self):
+        x_choice = int(input('X choice between 1 to 9:'))
+        self.update_cells(x_choice, 'X')
+
+    def opponent_choice(self):
+        o_choice = int(input('X choice between 1 to 9:'))
+        self.update_cells(o_choice, 'O')
+
+    def check_win(self, player: str) -> bool:
+        if self.cells[0] == player and self.cells[1] == player and self.cells[2] == player:
+            return True
+        if self.cells[3] == player and self.cells[4] == player and self.cells[5] == player:
+            return True
+        if self.cells[6] == player and self.cells[7] == player and self.cells[8] == player:
+            return True
+        if self.cells[0] == player and self.cells[4] == player and self.cells[8] == player:
+            return True
+        if self.cells[2] == player and self.cells[4] == player and self.cells[6] == player:
+            return True
+        return False
+
+    def check_tie(self) -> bool:
+        used_cells = ''
+        for cell in self.cells:
+            if cell != ' ':
+                used_cells += 1
+            if used_cells == 9:
+                return True
+            else:
+                return False
+
+
+game = TicTacToe()
+game.run_game()
