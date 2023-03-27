@@ -32,63 +32,87 @@ another input from person who entered wrong input]
 
 **************************** Very Simple Game for basic OOP concept ****************************************
 """
-import os
 
 
 class TicTacToe:
 
-    def __init__(self):
-        print('*******Welcome to Tic-Tac-Toe game!*******')
-        self.cells = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    def __init__(self, matrix: int = 3):
+        print('\n*******Welcome to Tic-Tac-Toe game!*******\n')
+        self.matrix = matrix
+
+        # Populate cell with values from 1 to matrix square.
+        self.cells = [[row + col for col in range(1, matrix + 1)] for row in range(0, matrix ** 2, matrix)]
 
     def display_board(self):
-        print(f'{self.cells[0]} | {self.cells[1]} | {self.cells[2]}')
-        print('--|---|---')
-        print(f'{self.cells[3]} | {self.cells[4]} | {self.cells[5]}')
-        print('--|---|---')
-        print(f'{self.cells[6]} | {self.cells[7]} | {self.cells[8]}')
-
-    def refresh_screen(self):
-        os.system('clear')
-        self.__init__()
-        self.display_board()
+        for row in self.cells:
+            for col in row:
+                print(f'{col}', end=' | ')
+            print('\n--|---|---|')
 
     def update_cells(self, cell_no, player):
-        if self.cells[cell_no] == ' ':
-            self.cells[cell_no] = player
-            self.display_board()
+        for row_idx in range(0, self.matrix):
+            for col_idx in range(0, self.matrix):
+                if self.cells[row_idx][col_idx] == cell_no:
+                    self.cells[row_idx][col_idx] = player
 
     def player_choice(self):
-        x_choice = int(input('X choice between 1 to 9:'))
+        x_choice = int(input('\n X choice between 1 to 9:'))
         self.update_cells(x_choice, 'X')
+        self.display_board()
 
     def opponent_choice(self):
-        o_choice = int(input('X choice between 1 to 9:'))
+        o_choice = int(input('\n O choice between 1 to 9:'))
         self.update_cells(o_choice, 'O')
+        self.display_board()
 
-    def check_win(self, player: str) -> bool:
-        if self.cells[0] == player and self.cells[1] == player and self.cells[2] == player:
-            return True
-        if self.cells[3] == player and self.cells[4] == player and self.cells[5] == player:
-            return True
-        if self.cells[6] == player and self.cells[7] == player and self.cells[8] == player:
-            return True
-        if self.cells[0] == player and self.cells[4] == player and self.cells[8] == player:
-            return True
-        if self.cells[2] == player and self.cells[4] == player and self.cells[6] == player:
-            return True
+    def is_row_same(self, player: str) -> bool:
+        for row in self.cells:
+            if row == [player] * 3:
+                return True
         return False
 
-    def check_tie(self) -> bool:
-        used_cells = ''
-        for cell in self.cells:
-            if cell != ' ':
-                used_cells += 1
-            if used_cells == 9:
+    def is_columns_same(self, player: str) -> bool:
+        for column in zip(*self.cells):
+            if list(column) == [player] * 3:
                 return True
+        return False
+
+    def is_diagonals_same(self, board: list[list[int]], player: str) -> bool:
+        for i in range(self.matrix):
+            if board[i][i] == player:
+                continue
+            if board[i][self.matrix - i - 1] == player:
+                continue
             else:
                 return False
+        return True
+
+    def check_win(self, player: str):
+        return self.is_row_same(player) \
+               or self.is_columns_same(player) \
+               or self.is_diagonals_same(self.cells, player)
+
+    def start(self):
+        count = 0
+        self.display_board()
+        while count < 5:
+            count += 1
+            print(f'count{count}')
+
+            self.player_choice()
+            if self.check_win(player='X'):
+                print(f'X wins!')
+                break
+
+            self.opponent_choice()
+            if self.check_win(player='O'):
+                print('O Wins!')
+                break
+
+# TODO: overlapping of X and O choice, specify separate forward and backward diagonal check, define tie conditon
+#  while checking win condition. Refactor as much as we can
+
 
 
 game = TicTacToe()
-game.run_game()
+game.start()
