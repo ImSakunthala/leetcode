@@ -31,3 +31,14 @@ Constraints:
 s contains English letters (upper-case and lower-case), digits, and spaces ' '.
 There is at least one word in s.
 """
+
+
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        return ' '.join(s.split()[::-1])
+
+
+solution = Solution()
+assert 'blue is sky the' == solution.reverseWords(s="the sky is blue")
+assert 'world hello' == solution.reverseWords(s="  hello world  ")
+assert 'example good a' == solution.reverseWords(s="a good   example")
