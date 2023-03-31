@@ -41,23 +41,24 @@ from typing import List
 
 
 class Solution:
-    def similarPairs(self, words: List[str]) -> int:
-        position = 0
-        result = []
+    def is_similar(self, s1: str, s2: str) -> bool:
+        return set(s1) == set(s2)
 
-        while position < len(words) - 1:
-            list_of_char = [char for char in set(words[position])]
+    def similarPairs(self, words: List[str]) -> int:
+        position, count = 0, 0
+
+        while position < len(words)-1:
+            base_word = words[position]
             for index, word in enumerate(words):
-                if index != position:
-                    check_char = [char for char in set(word)]
-                    if check_char == list_of_char:
-                        result.extend([words[position], word])
+                if self.is_similar(base_word, words[index]) and index > position and index != position:
+                    count += 1
             position += 1
-        print(result)
+
+        return count
 
 
 solution = Solution()
-print(solution.similarPairs(words = ["aba","aabb","abcd","bac","aabc"]))
-print(solution.similarPairs(words = ["aabb","ab","ba"]))
-print(solution.similarPairs(words = ["nba","cba","dba"]))
+assert solution.similarPairs(words = ["aba","aabb","abcd","bac","aabc"]) == 2
+assert solution.similarPairs(words = ["aabb","ab","ba"]) == 3
+assert solution.similarPairs(words = ["nba","cba","dba"]) == 0
 
