@@ -36,8 +36,8 @@ class Solution:
         sub_arrays = self.sub_arrays_of_3(nums)
         result = []
 
-        for array in sub_arrays:
-            result.append(math.prod(array))
+        for ARRAY in sub_arrays:
+            result.append(math.prod(ARRAY))
         return max(result)
 
 
