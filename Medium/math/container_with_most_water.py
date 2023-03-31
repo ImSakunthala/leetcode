@@ -25,17 +25,19 @@ from typing import List
 
 class Solution:
     def maxArea(self, height: List[int]) -> int:
-        heights = []
-        max_area = max(height)
+        max_area, left, right = 0, 0, len(height)-1
 
-        for num in height:
-            if num != max_area:
-                heights.append(num)
-        max_area1 = max(heights) if len(heights) != 0 else 0
+        while left < right:
+            left_height, right_height, width = height[left], height[right], right-left
+            max_area = max(max_area, min(left_height, right_height) * width)
+            if left_height <= right_height:
+                left += 1
+            else:
+                right -= 1
 
-        return max_area**2 if len(heights) == 0 else max_area1**2
+        return max_area
 
 
 solution = Solution()
-print('49 ->', solution.maxArea(height=[1, 8, 6, 2, 5, 4, 8, 3, 7]))
-print('1 ->', solution.maxArea(height=[1, 1]))
+assert 49 == solution.maxArea(height=[1, 8, 6, 2, 5, 4, 8, 3, 7])
+assert 1 == solution.maxArea(height=[1, 1])
