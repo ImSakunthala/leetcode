@@ -97,6 +97,6 @@ class Solution:
 
 
 solution = Solution()
-print(solution.num_of_pairs(nums=["1", "1", "1"], target="11"))
-print(solution.num_of_pairs(nums=["777", "7", "77", "77"], target="7777"))
-print(solution.num_of_pairs(nums=["123", "4", "12", "34"], target="1234"))
+assert 6 == solution.num_of_pairs(nums=["1", "1", "1"], target="11")
+assert 4 == solution.num_of_pairs(nums=["777", "7", "77", "77"], target="7777")
+assert 2 == solution.num_of_pairs(nums=["123", "4", "12", "34"], target="1234")
