@@ -51,6 +51,6 @@ class Solution:
 
 
 solution = Solution()
-print('True ->', solution.isAlienSorted(words = ["hello","leetcode"], order = "hlabcdefgijkmnopqrstuvwxyz"))
-print('False ->', solution.isAlienSorted(words = ["word","world","row"], order = "worldabcefghijkmnpqstuvxyz"))
-print('False ->', solution.isAlienSorted(words = ["apple","app"], order = "abcdefghijklmnopqrstuvwxyz"))
+assert True == solution.isAlienSorted(words=["hello", "leetcode"], order="hlabcdefgijkmnopqrstuvwxyz")
+assert False == solution.isAlienSorted(words=["word", "world", "row"], order="worldabcefghijkmnpqstuvxyz")
+assert False == solution.isAlienSorted(words=["apple", "app"], order="abcdefghijklmnopqrstuvwxyz")
