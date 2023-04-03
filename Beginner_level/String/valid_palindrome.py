@@ -34,7 +34,7 @@ s consists only of printable ASCII characters.
 
 
 class Solution:
-    def isPalindrome(s: str) -> bool:
+    def isPalindrome(self, s: str) -> bool:
 
         import re
 
@@ -47,11 +47,8 @@ class Solution:
             return False
 
 
-
-solution = Solution
-print(solution.isPalindrome('ab_a'))
-print(solution.isPalindrome('A man, a plan, a canal: Panama'))
-print(solution.isPalindrome('race a car'))
-print(solution.isPalindrome(''))
-
-
+solution = Solution()
+assert True == solution.isPalindrome('ab_a')
+assert True == solution.isPalindrome('A man, a plan, a canal: Panama')
+assert False == solution.isPalindrome('race a car')
+assert True == solution.isPalindrome('')
