@@ -131,7 +131,7 @@ class TicTacToe:
                     break
 
 # TODO: overlapping of X and O choice, specify separate forward and backward diagonal check, define tie conditon
-#  while checking win condition. Refactor as much as we can
+#  while checking win condition. Refactor as much as we can. Lets try this!
 
 
 
