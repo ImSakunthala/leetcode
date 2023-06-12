@@ -24,14 +24,22 @@ from typing import List
 
 class Solution:
     def countNegatives(self, grid: List[List[int]]) -> int:
+        negative_num = []
+        m, n = len(grid), len(grid[0])
+
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j] < 0:
+                    negative_num.append(grid[i][j])
+
+        return len(negative_num)
+    def countNegatives1(self, grid: List[List[int]]) -> int:
         count = 0
         for m in grid:
             for n in m:
                 if n < 0:
                     count += 1
         return count
-
-
 
 
 solution = Solution()

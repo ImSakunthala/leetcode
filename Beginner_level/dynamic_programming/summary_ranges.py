@@ -55,4 +55,4 @@ class Solution:
 
 
 solution = Solution()
-print(solution.summaryRanges(nums = [0,1,2,4,5,7]))
+print(solution.summaryRanges(nums=[0, 1, 2, 4, 5, 7]))
